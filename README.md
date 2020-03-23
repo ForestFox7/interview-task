@@ -1,46 +1,27 @@
-# Project task
+# InterviewTask
 
-Your task is to implement simple TODO application. User should be able to perform the following actions: 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.4.
 
-* Create new task in TODO list
-* Mark any task as completed/uncompleted
-* Delete any task from the task list
+## Development server
 
-## Git
-* You are obligated to work with Git. Please fork this repository when you start your project.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Important notes
+## Code scaffolding
 
-* The scope of the task is to implement simple TODO application
-* You are not required to implement any database or backend service, **but you can implement them if you feel more comfortable and if you want to demonstrate your skills**
-* Imagine that this is official project and you are developing for one of our clients **(this means we expect your code to be clean, commented and professional)**
-* Layout/design of your application should be exactly as on the screen provided in #ApplicationLayout section
-* You can use any font on Google Fonts similar to the font we used on the picture
-* If you are not sure about some feature or if you have any question please contact us
-* You are allowed to use any additional library/package (vuerouter, vuex etc.) or any frontend component library (bootstrap, vuetify etc.). If you decided not to use the Vue framework (and provided quick start project) then again you are allowed to use any other frontend framework including Angular 2 or React.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
+## Build
 
-## Application layout
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-Here is an example how your application could look like.
+## Running unit tests
 
-![Example of the application](https://github.com/amirduran/interview-task/blob/master/app-example.png?raw=true)
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+## Running end-to-end tests
 
-# Project setup
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-We have prepared a simple Vue application so you can start working on your task by doing few clicks. You can perform the following commands in command line to install the project and start working.
+## Further help
 
-> ***IMPORTANT***: If you are not comfortable with Vue framework, you can choose any other framework you want (Angular 2, React). 
-
-### 1.) Clone this repository
-
-### 2.) Install project dependencies
-```
-npm install
-```
-
-### 3.) Compiles and hot-reloads for development
-```
-npm run serve
-```
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

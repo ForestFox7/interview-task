@@ -1,0 +1,143 @@
+.logoTitle {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    min-height: 50px;
+    min-width: 50px;
+  }
+}
+
+h1 {
+  text-align: center;
+}
+
+.AufgabenListe {
+  border: 1px solid purple;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  padding: 15px 0;
+}
+
+.headline {
+  display: inline-block;
+  padding: 0 15px;
+  margin-bottom: 25px;
+  width: 100%;
+  color: purple;
+  letter-spacing: 5px;
+}
+
+.AufgabeErstellen {
+  border: 1px solid purple;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.AufgabeInput {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  border-radius: 15px;
+  border: none;
+  padding: 15px;
+}
+
+.todoList {
+  padding: 0 15px;
+}
+
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0 15px 0;
+
+  &:hover {cursor: pointer;}
+}
+
+.todoItemLeft {
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  margin: 0 10px 0 0;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.todoItemLabel {
+  flex-grow: 1;
+  flex-shrink: 0;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  max-width: 100%;
+  padding-right: 15px;
+
+  &.completed {
+    text-decoration: line-through;
+    color: gray;
+  }
+}
+
+.removeItem {
+  font-size: 22px;
+  padding: 0 5px;
+  color: gray;
+
+  &:hover {cursor: pointer;}
+}
+
+.todoListAfter {
+  font-size: 12px;
+  color: gray;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-top: 1px solid purple;
+}
+
+.todoAllLeft {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.todoListControls {
+  padding: 15px 15px 0 15px;
+  border-top: 1px solid purple;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    font-size: 12px;
+    background: purple;
+    color: #fff;
+    box-shadow: none;
+    transition: all 0.1s;
+    border: 1px solid purple;
+    margin-right: 1px;
+    padding: 2px 6px;
+
+    &:hover, &:focus, &:active, &.active {
+      background: #fff;
+      color: #000;
+    }
+    &.clearBtn {
+      margin-right: 0;
+    }
+  }
+}

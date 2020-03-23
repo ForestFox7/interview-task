@@ -1,0 +1,45 @@
+<div class="logoTitle">
+  <div class="logo" role="banner">
+    <img
+      width="40"
+      alt="Angular Logo"
+      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
+    />
+  </div>
+  <h1>{{ title }}</h1>
+</div>
+<div class="AufgabeErstellen">
+  <input type="text" class="AufgabeInput" placeholder="{{ placeholder }}" [(ngModel)]="todoTitle" (keyup.enter)="addTodo()">
+</div>
+<div class="AufgabenListe">
+  <span class="headline">{{ headline }}</span>
+  <div class="todoList">
+    <div class="todoItem" *ngFor="let todo of todosFiltered()" @fade>
+      <div class="todoItemLeft">
+        <input type="checkbox" [(ngModel)]="todo.completed">
+        <div class="todoItemLabel" *ngIf="!todo.editing; else editingTodo" [ngClass]="{ 'completed' : todo.completed }" (dblclick)="editTodo(todo)">{{ todo.title }}</div>
+        <ng-template #editingTodo>
+          <input type="text" class="todoEdit" [(ngModel)]="todo.title" (blur)="doneEdit(todo)" (keyup.enter)="doneEdit(todo)" (keyup.esc)="cancelEdit(todo)" autofocus>
+        </ng-template>
+      </div>
+      <div class="removeItem" (click)="deleteTodo(todo.id)">
+        &times;
+      </div>
+    </div>
+  </div>
+  <div class="todoListAfter">
+    <div class="todoAllLeft">
+      <input type="checkbox" (change)="checkAllTasks()">
+      <div class="checkAllLabel">{{ checkAll }}</div>
+    </div>
+    <div class="amountLeft">{{ remaining() }} {{ itemsLeft }}</div>
+  </div>
+  <div class="todoListControls">
+    <div class="overview">
+      <button [ngClass]="{'active': filter === 'alle'}" (click)="filter = 'alle'">Alle</button>
+      <button [ngClass]="{'active': filter === 'aktiv'}" (click)="filter = 'aktiv'">Aktiv</button>
+      <button [ngClass]="{'active': filter === 'fertig'}" (click)="filter = 'fertig'">Komplett</button>
+    </div>
+    <button class="clearBtn" *ngIf="atLeastOneCompleted()" (click)="deleteCompleted()">{{ clearAll }}</button>
+  </div>
+</div>
